@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot.dao.CeshiDao">
+    <select id="openauth" resultType="com.example.springboot.po.StudentPO">
+        select id,XH personCode,XM name,JHCXRQ startTime,
+	JHFXRQ endTime from USR_EHALL.W_XSCXSQ where trunc(JHCXRQ)&lt;=trunc(sysdate) and trunc(sysdate)&lt;=JHFXRQ and DQZT = 3 and BZ1 is null and BZ2 is null and xh not in (select JLID from USR_EHALL_ZJK.T_CRFOUR b)
+    </select>
+
+    <update id="afterOpenauth">
+        update USR_EHALL.W_XSCXSQ set BZ1 = #{addTime} where  id =#{id}
+    </update>
+
+    <select id="sendLiuJia" resultType="com.example.springboot.po.LiuJiaPO">
+        SELECT
+ VX.ID id,
+ VX.XH xh,
+ VX.XY xy,
+ VX.LXDH lxdh,
+ VX.JJLXR jjlxr,
+ VX.JJLXRDH jjlxrdh,
+ VX.DQZT dqzt,
+ VX.CXSY cxsy,
+ VX.SQSJ sqsj,
+ VX.XM xm,
+ VX.JHCXRQ jhcxrq,
+ WX.JHFXRQ jhfxrq,
+ VX.FDY fdy,
+ VX.XB xb,
+ VX.BH bh,
+ VX.FDYGH fdygh
+from
+ USR_EHALL.V_XSCXSQ VX
+ left join USR_EHALL.W_XSCXSQ WX on
+ VX.ID = WX.ID
+ where
+ VX.ID in ( select id from USR_EHALL.W_XSCXSQ where trunc(JHCXRQ)&lt;=trunc(sysdate) and trunc(sysdate)&lt;=JHFXRQ and DQZT = 3 and BZ3 is null ) and VX.xh not in (select JLID from USR_EHALL_ZJK.T_CRFOUR b)
+    </select>
+
+    <update id="afterSendLiuJia">
+         update USR_EHALL.W_XSCXSQ set BZ3 = 1 where  id =#{id}
+    </update>
+</mapper>

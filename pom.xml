@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>openauth</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>getout</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.4.0-atlassian-hosted</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.28</version>
+        </dependency>
+
+        <dependency>
+        <groupId>axis</groupId>
+            <artifactId>axis-1.2.1.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+        <systemPath>${project.basedir}/src/main/resources/lib/axis-1.2.1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>axis-ant.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/axis-ant.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>commons-beanutils-1.8.2.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/commons-beanutils-1.8.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>commons-collections-3.1.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/commons-collections-3.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>commons-discovery-0.2.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/commons-discovery-0.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>commons-lang3-3.1.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/commons-lang3-3.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>commons-lang-2.0.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/commons-lang-2.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>commons-logging-1.1.1.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/commons-logging-1.1.1.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>ezmorph-1.0.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/ezmorph-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>jaxrpc.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/jaxrpc.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>json-1.0.0.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/json-1.0.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>json-lib-2.2.3-jdk15.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/json-lib-2.2.3-jdk15.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>mail.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/mail.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>saaj.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/saaj.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>wsdl4j-1.5.1.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/wsdl4j-1.5.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>axis</groupId>
+            <artifactId>ucpws-client.jar</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/ucpws-client.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+</project>
